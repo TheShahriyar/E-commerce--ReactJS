@@ -1,11 +1,17 @@
 import React from 'react'
 import styled from "styled-components"
 
-const CategoryItem = (prop: {title: string, imgurl:string}) => {
+interface CategoryItemProps {
+  title: string,
+  imageUrl: string,
+  linkUrl: string
+}
+
+const CategoryItem = (prop: CategoryItemProps):any => {
   
   return (
     <>
-      <CategoryItemWrapper style={{backgroundImage: `url(${prop.imgurl})`}}>
+      <CategoryItemWrapper style={{backgroundImage: `url(${prop.imageUrl})`}}>
         <div className="content">
           <h1 className="title">{prop.title}</h1>
           <span className="subtitle">Shop Now</span>

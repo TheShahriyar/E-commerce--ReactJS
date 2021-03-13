@@ -13,7 +13,7 @@ export default class Category extends Component {
     return (
       <>
         <CategoryWrapper>
-          {this.state.categories.map(category => <CategoryItem key={category.id} title={category.title} imgurl={category.imageUrl} />)}
+          {this.state.categories.map(({id, ...otherCategoryProps}) => <CategoryItem key={id} {...otherCategoryProps} />)}
         </CategoryWrapper>
       </>
     )
